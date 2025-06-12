@@ -2,25 +2,25 @@
 #include <stdlib.h>
 #include <locale.h>
 
-//Ler um vetor de 7 elementos inteiros e imprimir a soma dos valores nas posições ímpares (índice ímpar, não valor ímpar).
+// Ler um vetor de 7 elementos inteiros e imprimir a soma dos valores nas posiÃ§Ãµes Ã­mpares (Ã­ndice Ã­mpar, nÃ£o valor Ã­mpar).
 
-int main()
-{
+int main() {
     setlocale(LC_ALL, "Portuguese");
 
     int numeros[7];
-    int i;
+    int i, soma = 0;
 
-    for (i = 1; i < 7; i++){
-    printf("Digite o valor %d:", i);
-    scanf("%d", &numeros[i]);
+    for (i = 1; i < 8; i++) {
+        printf("NÃºmero na posiÃ§Ã£o %d: ", i);
+        scanf("%d", &numeros[i]);
     }
 
-    printf("Os número(s) negativo(s) são\n");
-    for (i = 1; i < 7; i++){
-    if (numeros[i] < 0){
-    printf("numero %d \n", numeros[i]);
-    }
-        }
+    for (i = 1; i < 8; i ++) {
+        if (i % 2 != 0){
+            soma += numeros[i];
+    } }
+
+    printf("\nA soma dos valores nas posiÃ§Ãµes Ã­mpares Ã©: %d\n", soma);
+
     return 0;
 }
